@@ -36,3 +36,152 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.App {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* SearchBar.css */
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.search-bar .input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 70%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-bar .input:focus {
+  border-color: #007bff;
+}
+
+.search-bar .btn {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-bar .btn:hover {
+  background-color: #0056b3;
+}
+
+/* BookList.css */
+.book-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+/* BookCard.css */
+.book-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.book-cover {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.book-card h3 {
+  font-size: 1.1rem;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.book-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+/* Add this to App.css or any global stylesheet */
+.loading,
+.error {
+  font-size: 1.1rem;
+  color: #777;
+  margin-top: 20px;
+}
+
+.error {
+  color: #d9534f;
+}
+/* Add this to App.css */
+@media (max-width: 600px) {
+  .App {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .search-bar .input {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .search-bar .btn {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .book-card h3 {
+    font-size: 1rem;
+  }
+
+  .book-card p {
+    font-size: 0.85rem;
+  }
+}
